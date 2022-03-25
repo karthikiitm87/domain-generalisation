@@ -42,7 +42,7 @@ for image in imagefiles:
     annotations.append([image, encode_boxes(bbox)])
   
   
-results = pd.DataFrame(annotations,columns =["image_name","PredString"])
+results = pd.DataFrame(annotations,columns =["image_name","BoxesString"])
 
 
 #There is no seperate test file and hence we are generating this sim10k test split 
