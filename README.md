@@ -9,7 +9,7 @@ We used the following datasets for our experiments.
 3. [Sim10K](https://fcav.engin.umich.edu/projects/driving-in-the-matrix) 
 4. [Berkely Deep Drive](https://bdd-data.berkeley.edu/) 
 
-Our code expects the input data format to be in csv format and we provide necessary helper functions to convert the annotations from json (Cityscapes, BDD100K), xml (Sim10k) formats into csv format for all the datasets. But we expect the users to download the datasets from respective websites and follow the file structure mentioned below so that the code can directly access the datasets. The file requirements.txt has all the dependencies needed to run this code. 
+Our code expects the input data format to be in csv format and we provide necessary helper functions to convert the annotations from json (Cityscapes, BDD100K), xml (Sim10K) formats into csv format for all the datasets. But we expect the users to download the datasets from respective websites and follow the file structure mentioned below so that the code can directly access the datasets. The file requirements.txt has all the dependencies needed to run this code. 
 
 Dataset details/Folder Structure!
 Command for training
