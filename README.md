@@ -18,7 +18,7 @@ We recommend everyone who would like to use this code follow this directory stru
 
 # Using Faster-RCNN detector
 
-Even though we do not restrict our approach to improve the generalisation to a specific detector, we have currently used Faster-RCNN as an example detector to demonstrate our approach. In future, we will include the codes using other popular detectors as well. In this code, we use torchvision's Faster-RCNN detector with COCO pretrained weights for experimenting with Cityscapes, Sim10K, BDD100K while we obtained better accuracy for GWHD using ImageNet pretrained weights. 
+Even though we do not restrict our approach to improve the generalisation to a specific detector, we have currently used Faster-RCNN as an example detector to demonstrate our approach. In future, we will include the codes using other popular detectors as well. In this code, we use torchvision's Faster-RCNN detector with COCO pretrained weights for experimenting with Cityscapes, Sim10K, BDD100K while we obtained better accuracy for GWHD using ImageNet pretrained weights. We use the Pytorch-Lightning framework to train our model. 
 
 Dataset details/Folder Structure!
 Command for training
