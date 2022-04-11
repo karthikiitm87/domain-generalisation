@@ -9,7 +9,7 @@ We used the following datasets for our experiments.
 3. [Sim10K](https://fcav.engin.umich.edu/projects/driving-in-the-matrix) 
 4. [Berkely Deep Drive 100K (BDD100K)](https://bdd-data.berkeley.edu/) 
 
-Our code expects the input data format to be in csv format and we provide necessary helper functions to convert the annotations from json (Cityscapes, BDD100K), xml (Sim10K) formats into csv format for all the datasets. But we expect the users to download the datasets from respective websites and follow the file structure mentioned below so that the code can directly access the datasets. The file requirements.txt has all the dependencies needed to run this code. 
+Our code expects the input data format to be in csv format and we provide necessary helper functions to convert the annotations from JSON (Cityscapes, BDD100K), XML (Sim10K) formats into csv format for all the datasets. But we expect the users to download the datasets from respective websites and follow the file structure mentioned below so that the code can directly access the datasets. The file requirements.txt has all the dependencies needed to run this code. 
 
 ```
 ./downloads.sh  #GWHD and Sim10K can be downloaded in 'datasets' folder by execuitng this command 
@@ -53,13 +53,13 @@ BDD100K, Cityscapes, Foggy-cityscapes, Rain-Cityscapes need to download manually
     ├── Annots
 ```
 
-Once above directory structure is ensured, the following command needs to be executed to convert all the annotations into csv format as needed by our code. 
+Once above directory structure is ensured, the following command needs to be executed to convert all the annotations into csv format and place them in Annots as needed by our code. 
 
 ```
 ./to_csv_conversion.sh
 ```
 
-The above command will generate the following 12 csv files where a subset of them will be used by the detector during training. 
+The above command will generate the following 12 csv files in Annots folder where a subset of them will be used by the detector during training. 
 
 ```
 1. bdd100k_car_train.csv
