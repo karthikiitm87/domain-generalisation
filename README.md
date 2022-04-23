@@ -48,6 +48,8 @@ BDD100K, Cityscapes, Foggy-cityscapes, Rain-Cityscapes need to download manually
     |     ├── train
     |     ├── val
     |     ├── test
+    ├── gwhd_2021
+    |     ├── images
     ├── downloads.sh
     ├── to_csv_conversion.sh
     ├── Annots
