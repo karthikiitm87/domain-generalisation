@@ -84,4 +84,21 @@ The above command will generate the following 12 csv files in Annots folder wher
 Even though we do not restrict our approach to improve the generalisation to a specific detector, we have currently used Faster-RCNN as an example detector to demonstrate our approach. In future, we will include the codes using other popular detectors as well. In this code, we need to train additional domain specific classifiers for which we need the access to ground truth labels of each identified region proposal. We have made minor changes to the Faster-RCNN implementation in [WilDS](https://github.com/p-lambda/wilds/tree/main/examples/models/detection) to obtain the ground truth labels of each region proposal. We initialise our ResNet backbone with COCO pretrained weights for experimenting with Cityscapes, Sim10K, BDD100K while we obtained better accuracy for GWHD using ImageNet pretrained weights. We use the Pytorch-Lightning framework to train our model. 
 
 
+# Results
+
+The following command can be executed to replicate the results in Table 1 (GWHD).
+
+```
+python train1.py
+```
+
+The following command can be executed to replicate the results in lower half of Table 2. For upper half of the Table 2, uncomment the line 716 and comment 715 in train2.py file. 
+```
+python train2.py
+```
+
+The following command can be executed to replicate the results in Table 3. Appropriate lines 144--157 of train3.py needs to be uncommented based on which column of Table 3 is being replicated. 
+```
+python train3.py
+```
 
