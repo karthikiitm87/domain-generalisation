@@ -588,7 +588,7 @@ from pytorch_lightning.callbacks.early_stopping import EarlyStopping
 early_stop_callback= EarlyStopping(monitor='val_acc', min_delta=0.00, patience=10, verbose=False, mode='max')
 
 
-checkpoint_callback = ModelCheckpoint(monitor='val_loss', dirpath=NET_FOLDER, filename='best_prop8')
+checkpoint_callback = ModelCheckpoint(monitor='val_loss', dirpath=NET_FOLDER, filename=weights_file)
 trainer = Trainer(gpus=1, progress_bar_refresh_rate=1, max_epochs=100, deterministic=False, callbacks=[checkpoint_callback, early_stop_callback], reload_dataloaders_every_n_epochs=1)
 #trainer.fit(detector, val_dataloaders=val_dataloader)
 
