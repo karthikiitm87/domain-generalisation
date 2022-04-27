@@ -13,6 +13,6 @@ mkdir gwhd_2021
 scp gwhd_2021.tar.gz ./gwhd_2021/
 cd gwhd_2021
 tar -zxvf gwhd_2021.tar.gz
-scp ./gwhd_2021/official_train.csv ./Annots/
-scp ./gwhd_2021/official_val.csv ./Annots/
-scp ./gwhd_2021/official_test.csv ./Annots/
+scp ./official_train.csv ../Annots/
+scp ./official_val.csv ../Annots/
+scp ./official_test.csv ../Annots/
