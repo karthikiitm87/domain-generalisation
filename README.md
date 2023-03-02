@@ -5,7 +5,9 @@ This repository is the collection of all the works done for the project on '[Dom
 Till date, the work done under this project has been published in two premier conference publications. 
 1. K. Seemakurthy, C. Fox, E. Aptoula, and P. Bosilj, "Domain Generalised Faster R-CNN", AAAI 2023 (Codes present in DGFRCNN folder)
 2. K. Seemakurthy, P.Bosilj, E. Aptoula, and C. Fox, "Domain Generalised Fully Convolutional One Stage Object Detection", ICRA 2023 (Codes present in DGFCOS folder)
-The links for camera ready publications will be soon updated in this page. However, the first version of ArXiv paper can be found at '[Domain Generalisation for Object Detection'](https://arxiv.org/abs/2203.05294).  
+The links for camera ready publications will be soon updated in this page. 
+
+However, the first version of ArXiv paper can be found at '[Domain Generalisation for Object Detection'](https://arxiv.org/abs/2203.05294).  
 
 We used the following datasets for our experiments. 
 
@@ -88,19 +90,20 @@ The above command will generate the following 12 csv files in Annots folder wher
 
 In this code, we need to train additional domain specific classifiers for which we need the access to ground truth labels of each identified region proposal. We have made minor changes to the Faster-RCNN implementation in [WilDS](https://github.com/p-lambda/wilds/tree/main/examples/models/detection) to obtain the ground truth labels of each region proposal. We initialise our ResNet backbone with COCO pretrained weights for experimenting with Cityscapes, Sim10K, BDD100K while we obtained better accuracy for GWHD using ImageNet pretrained weights. We use the Pytorch-Lightning framework to train our model. 
 
-The following command can be executed to replicate the results in Table 1 (GWHD).
-
+The following command can be executed to replicate the results in Table 1. Appropriate lines of train_Cityscapes.py needs to be uncommented based on which results in  Table 1 can be replicated. 
 ```
-python DGFRCNN/train1.py
-```
-
-The following command can be executed to replicate the results in lower half of Table 2. For upper half of the Table 2, uncomment the line 716 and comment 715 in train2.py file. 
-```
-python DGFRCNN/train2.py
+python DGFRCNN/train_cityscapes.py
 ```
 
-The following command can be executed to replicate the results in Table 3. Appropriate lines 144--157 of train3.py needs to be uncommented based on which column of Table 3 is being replicated. 
+The following commands can be executed to replicate the results in Table 2.  Appropriate lines in train_BSC.py needs to be uncommented based on the column that is of interest for replication. 
 ```
-python DGFRCNN/train3.py
+python DGFRCNN/train_GWHD.py
+python DGFRCNN/train_BSC.py
+```
+
+The following command can be executed to replicate the results in Table 3.
+
+```
+python DGFRCNN/train_DA.py
 ```
 
