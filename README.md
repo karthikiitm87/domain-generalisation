@@ -90,19 +90,23 @@ The above command will generate the following 12 csv files in Annots folder wher
 
 In this code, we need to train additional domain specific classifiers for which we need the access to ground truth labels of each identified region proposal. We have made minor changes to the Faster-RCNN implementation in [WilDS](https://github.com/p-lambda/wilds/tree/main/examples/models/detection) to obtain the ground truth labels of each region proposal. We initialise our ResNet backbone with COCO pretrained weights for experimenting with Cityscapes, Sim10K, BDD100K while we obtained better accuracy for GWHD using ImageNet pretrained weights. We use the Pytorch-Lightning framework to train our model. 
 
-The following command can be executed to replicate the results in Table 1. Appropriate lines of train_Cityscapes.py needs to be uncommented based on which results in  Table 1 can be replicated. 
+The following command can be executed to replicate the results in Table 1 (Cityscapes-->Foggy-Cityscapes, Cityscapes-->Rainy-Cityscapes).
+For upper half of the Table 1, uncomment the line 707 and comment 706 in train_cityscapes.py file. 
+For lower half of the Table 1, uncomment the line 706 and comment 707 in train_cityscapes.py file. 
 ```
 python DGFRCNN/train_cityscapes.py
 ```
 
-The following commands can be executed to replicate the results in Table 2.  Appropriate lines in train_BSC.py needs to be uncommented based on the column that is of interest for replication. 
+The following commands need to be executed to replicate the results in Table 2. 
+For the results on (S, C) --> B uncomment the lines 145-147 in train_BSC.py
+For the results on (S, B) --> C uncomment the lines 150-152 in train_BSC.py
+For the results on (B, C) --> S uncomment the lines 155-157 in train_BSC.py
 ```
 python DGFRCNN/train_GWHD.py
 python DGFRCNN/train_BSC.py
 ```
 
 The following command can be executed to replicate the results in Table 3.
-
 ```
 python DGFRCNN/train_DA.py
 ```
