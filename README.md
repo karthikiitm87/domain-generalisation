@@ -1,6 +1,6 @@
 # Domain generalisation for Object Detection
 
-This repository is the collection of all the works done for the project on '[Domain Generalisation for Object Detection']. Here three popular object detectors (Faster R-CNN, FCOS, YoloV3) are explored and the codes related to each of the detector are present in their respective folders. 
+This repository is the collection of all the works done for the project on '[Domain Generalisation for Object Detection']. Here three popular object detectors (Faster R-CNN, FCOS, YoloV3) are explored and the codes related to each of the detector are present in their respective respositories. 
 
 Till date, the work done under this project has been published in two premier conference publications. 
 1. K. Seemakurthy, C. Fox, E. Aptoula, and P. Bosilj, "Domain Generalised Faster R-CNN", AAAI 2023 (We recommend to refer our updated '[repo'](https://github.com/karthikiitm87/DGFRCNN) for replicating the results in this paper.)
